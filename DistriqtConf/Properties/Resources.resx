@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Adverts" xml:space="preserve">
+    <value>&lt;extensions&gt;
+	&lt;extensionID&gt;com.distriqt.Adverts&lt;/extensionID&gt;
+	&lt;extensionID&gt;com.distriqt.Core&lt;/extensionID&gt;
+
+	&lt;extensionID&gt;com.distriqt.playservices.Base&lt;/extensionID&gt;
+	&lt;extensionID&gt;com.distriqt.playservices.Ads&lt;/extensionID&gt;
+	&lt;extensionID&gt;com.distriqt.playservices.AdsIdentifier&lt;/extensionID&gt;
+
+	&lt;extensionID&gt;androidx.appcompat&lt;/extensionID&gt;
+	&lt;extensionID&gt;androidx.browser&lt;/extensionID&gt;
+	&lt;extensionID&gt;androidx.core&lt;/extensionID&gt;
+	&lt;extensionID&gt;androidx.constraintlayout&lt;/extensionID&gt;
+	&lt;extensionID&gt;androidx.vectordrawable&lt;/extensionID&gt;
+	&lt;extensionID&gt;com.google.code.gson&lt;/extensionID&gt;
+&lt;/extensions&gt;</value>
+  </data>
+  <data name="AdvertsManifest" xml:space="preserve">
+    <value>&lt;manifest android:installLocation="auto"&gt;
+	
+	&lt;!--Required. Used to access the Internet to make ad requests--&gt;
+	&lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+
+	&lt;!--Optional. Used to check if an internet connection is available prior to making an ad request.--&gt;
+	&lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/&gt;
+
+	&lt;application 
+		android:hardwareAccelerated="true"
+		android:appComponentFactory="androidx.core.app.CoreComponentFactory"&gt;
+
+		&lt;meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/&gt;
+		
+		&lt;meta-data
+			android:name="com.google.android.gms.ads.APPLICATION_ID"
+			android:value="ca-app-pub-AAAAAAAAAAAAAAAA~XXXXXXXXXX"/&gt;
+
+		&lt;activity
+			android:name="com.google.android.gms.common.api.GoogleApiActivity"
+			android:exported="false"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" /&gt;
+
+		&lt;activity 
+			android:name="com.google.android.gms.ads.AdActivity"
+			android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" 
+			android:theme="@android:style/Theme.Translucent" /&gt;
+			
+	&lt;/application&gt;
+
+&lt;/manifest&gt;</value>
+  </data>
+  <data name="Application" xml:space="preserve">
+    <value>&lt;extensions&gt;
+    &lt;extensionID&gt;com.distriqt.Application&lt;/extensionID&gt;
+    &lt;extensionID&gt;com.distriqt.Core&lt;/extensionID&gt;
+    &lt;extensionID&gt;androidx.core&lt;/extensionID&gt;
+&lt;/extensions&gt;</value>
+  </data>
+  <data name="ApplicationManifest" xml:space="preserve">
+    <value>&lt;manifest android:installLocation="auto"&gt;
+    &lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+    &lt;uses-permission android:name="android.permission.READ_PHONE_STATE"/&gt;
+    &lt;uses-permission android:name="android.permission.WAKE_LOCK" /&gt;
+    &lt;uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /&gt;
+
+    &lt;application&gt;
+        
+        &lt;!-- AUTO START and ALARM MANAGER --&gt;
+        &lt;receiver android:enabled="true"
+            android:name="com.distriqt.extension.application.receivers.ApplicationStartupReceiver"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.intent.action.BOOT_COMPLETED" /&gt;
+                &lt;category android:name="android.intent.category.DEFAULT" /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/receiver&gt;
+
+        &lt;!-- AUTHORISATION --&gt;
+        &lt;activity android:name="com.distriqt.extension.application.permissions.AuthorisationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" /&gt;
+
+        &lt;!-- ALARM MANAGER --&gt;
+        &lt;receiver android:name="com.distriqt.extension.application.alarms.AlarmReceiver" android:enabled="true" /&gt;
+        &lt;activity android:name="com.distriqt.extension.application.alarms.AlarmActivity" /&gt;
+
+        &lt;!-- SETTINGS --&gt;
+        &lt;activity android:name="com.distriqt.extension.application.settings.SettingsActivity" android:label="Settings" /&gt;
+
+        &lt;!-- APPLICATION STATE EVENTS --&gt;
+        &lt;provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="APPLICATION_PACKAGE.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" /&gt;
+
+    &lt;/application&gt;
+
+&lt;/manifest&gt;</value>
+  </data>
+  <data name="ApplicationRateManifest" xml:space="preserve">
+    <value>&lt;manifestAdditions&gt;&lt;![CDATA[
+	&lt;manifest android:installLocation="auto"&gt;
+		&lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+		&lt;uses-permission android:name="android.permission.FOREGROUND_SERVICE" /&gt;
+
+		&lt;application&gt;
+
+			&lt;!-- com.google.android.play --&gt;
+			&lt;activity
+				android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
+				android:enabled="false"
+				android:exported="false"
+				android:launchMode="singleInstance"
+				android:process=":playcore_missing_splits_activity"
+				android:stateNotNeeded="true" /&gt;
+			&lt;activity
+				android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+				android:enabled="false"
+				android:exported="false"
+				android:stateNotNeeded="true"
+				android:theme="@style/Theme.PlayCore.Transparent" /&gt;
+			&lt;service
+				android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
+				android:enabled="false"
+				android:exported="true" /&gt;
+
+		&lt;/application&gt;
+	&lt;/manifest&gt;
+]]&gt;&lt;/manifestAdditions&gt;</value>
+  </data>
+  <data name="ApplicationRater" xml:space="preserve">
+    <value>&lt;extensions&gt;
+	&lt;extensionID&gt;com.distriqt.ApplicationRater&lt;/extensionID&gt;
+	&lt;extensionID&gt;com.distriqt.Core&lt;/extensionID&gt;
+	&lt;extensionID&gt;com.google.android.play&lt;/extensionID&gt;
+&lt;/extensions&gt;</value>
+  </data>
+  <data name="CommonManifest" xml:space="preserve">
+    <value>&lt;manifest android:installLocation="auto" &gt;
+  &lt;uses-sdk android:minSdkVersion="19"/&gt;
+		&lt;uses-sdk android:targetSdkVersion="29"/&gt;
+  &lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+  &lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/&gt;
+	&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
+  &lt;uses-permission android:name="com.android.vending.BILLING"/&gt;
+  &lt;uses-permission android:name="android.permission.GET_ACCOUNTS"/&gt;
+&lt;/manifest&gt;</value>
+  </data>
+  <data name="Facebook" xml:space="preserve">
+    <value>&lt;extensions&gt;
+	&lt;extensionID&gt;com.distriqt.FacebookAPI&lt;/extensionID&gt;
+	&lt;extensionID&gt;com.distriqt.Core&lt;/extensionID&gt;
+	
+	&lt;extensionID&gt;com.distriqt.Bolts&lt;/extensionID&gt;
+
+	&lt;extensionID&gt;com.distriqt.playservices.Base&lt;/extensionID&gt;
+	&lt;extensionID&gt;com.distriqt.playservices.Auth&lt;/extensionID&gt;
+
+	&lt;extensionID&gt;androidx.appcompat&lt;/extensionID&gt;
+	&lt;extensionID&gt;androidx.browser&lt;/extensionID&gt;
+	&lt;extensionID&gt;androidx.cardview&lt;/extensionID&gt;
+	&lt;extensionID&gt;androidx.core&lt;/extensionID&gt;
+	&lt;extensionID&gt;androidx.recyclerview&lt;/extensionID&gt;
+	&lt;extensionID&gt;androidx.transition&lt;/extensionID&gt;
+	&lt;extensionID&gt;androidx.vectordrawable&lt;/extensionID&gt;
+	&lt;extensionID&gt;com.android.installreferrer&lt;/extensionID&gt;
+	&lt;extensionID&gt;com.google.android.material&lt;/extensionID&gt;
+&lt;/extensions&gt;</value>
+  </data>
+  <data name="FacebookManifest" xml:space="preserve">
+    <value>&lt;manifest android:installLocation="auto"&gt;
+	&lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+	&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/&gt;
+
+	&lt;application android:name="androidx.multidex.MultiDexApplication"&gt;
+		&lt;meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" /&gt;
+
+		&lt;intent-filter&gt;
+			&lt;action android:name="android.intent.action.MAIN" /&gt;
+			&lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+		&lt;/intent-filter&gt;
+
+		&lt;!-- FACEBOOK API --&gt;	
+		&lt;meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="true"/&gt;
+        &lt;meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="true"/&gt;
+        &lt;meta-data android:name="com.facebook.sdk.AutoInitEnabled" android:value="true"/&gt;
+		
+		&lt;activity android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" /&gt;
+		&lt;activity android:name="com.facebook.CustomTabMainActivity" /&gt;
+		&lt;provider android:name="com.facebook.internal.FacebookInitProvider" android:exported="false"
+			android:authorities="YOUR_PACKAGE_NAME.FacebookInitProvider" /&gt;
+			
+		&lt;receiver android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver" android:exported="false" &gt;
+			&lt;intent-filter&gt;
+				&lt;action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" /&gt;
+			&lt;/intent-filter&gt;
+		&lt;/receiver&gt;
+
+		&lt;activity android:name="com.facebook.CustomTabActivity" android:exported="true" &gt;
+			&lt;intent-filter&gt;
+				&lt;action android:name="android.intent.action.VIEW" /&gt;
+				&lt;category android:name="android.intent.category.DEFAULT" /&gt;
+				&lt;category android:name="android.intent.category.BROWSABLE" /&gt;
+				&lt;!-- Don't remove the 'fb' prefix --&gt;
+				&lt;data android:scheme="fb[YOUR_FACEBOOK_APP_ID]" /&gt;
+			&lt;/intent-filter&gt;
+		&lt;/activity&gt;
+
+		&lt;!-- IMPORTANT: Do not remove the backslash and space at the beginning of the following value string. --&gt;
+		&lt;meta-data android:name="com.facebook.sdk.ApplicationId" android:value="\ [YOUR_FACEBOOK_APP_ID]"/&gt;
+		&lt;provider android:authorities="com.facebook.app.FacebookContentProvider[YOUR_FACEBOOK_APP_ID]" android:name="com.facebook.FacebookContentProvider" android:exported="true" /&gt;
+
+		
+
+	&lt;/application&gt;
+
+&lt;/manifest&gt;</value>
+  </data>
+  <data name="GameService" xml:space="preserve">
+    <value>&lt;extensions&gt;
+    &lt;extensionID&gt;com.distriqt.GameServices&lt;/extensionID&gt;
+    &lt;extensionID&gt;com.distriqt.Core&lt;/extensionID&gt;
+    &lt;extensionID&gt;androidx.core&lt;/extensionID&gt;
+    &lt;extensionID&gt;androidx.appcompat&lt;/extensionID&gt;
+    &lt;extensionID&gt;com.distriqt.playservices.Base&lt;/extensionID&gt;
+    &lt;extensionID&gt;com.distriqt.playservices.Drive&lt;/extensionID&gt;
+    &lt;extensionID&gt;com.distriqt.playservices.Games&lt;/extensionID&gt;
+    &lt;extensionID&gt;com.distriqt.playservices.Auth&lt;/extensionID&gt;
+&lt;/extensions&gt;</value>
+  </data>
+  <data name="GameSeviceManifest" xml:space="preserve">
+    <value>&lt;manifest android:installLocation="auto"&gt;
+	&lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+	
+	&lt;application&gt;
+		
+		&lt;meta-data android:name="com.google.android.gms.games.APP_ID" android:value="\ XXXXXXXXXXXX" /&gt;
+		&lt;meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" /&gt;
+
+		&lt;activity
+			android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+			android:excludeFromRecents="true"
+			android:exported="false"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" /&gt;
+		&lt;service
+			android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+			android:exported="true"
+			android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" /&gt;
+
+		&lt;activity
+			android:name="com.google.android.gms.common.api.GoogleApiActivity"
+			android:exported="false"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" /&gt;
+		
+	&lt;/application&gt;
+	
+&lt;/manifest&gt;</value>
+  </data>
+  <data name="InApp" xml:space="preserve">
+    <value>&lt;extensions&gt;
+    &lt;extensionID&gt;com.distriqt.InAppBilling&lt;/extensionID&gt;
+    &lt;extensionID&gt;com.distriqt.Core&lt;/extensionID&gt;
+&lt;/extensions&gt;</value>
+  </data>
+  <data name="InAppManifest" xml:space="preserve">
+    <value>&lt;manifest android:installLocation="auto"&gt;
+	&lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+	&lt;uses-permission android:name="com.android.vending.BILLING" /&gt;
+
+	&lt;application&gt;
+
+		&lt;activity 
+			android:name="com.distriqt.extension.inappbilling.activities.ProductViewActivity" 
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" /&gt;
+
+
+		&lt;!-- GOOGLE PLAY BILLING --&gt;
+		&lt;activity
+			android:name="com.android.billingclient.api.ProxyBillingActivity"
+			android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" /&gt;
+
+	&lt;/application&gt;
+
+&lt;/manifest&gt;</value>
+  </data>
+</root>
