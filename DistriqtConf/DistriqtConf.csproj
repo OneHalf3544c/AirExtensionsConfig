@@ -52,10 +52,8 @@
       <DependentUpon>ApplicationXML.cs</DependentUpon>
     </Compile>
     <Compile Include="DisriqtConfig.cs" />
-    <Compile Include="Distiqt.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XmlHelper.cs" />
     <EmbeddedResource Include="ApplicationXML.resx">
       <DependentUpon>ApplicationXML.cs</DependentUpon>
     </EmbeddedResource>
