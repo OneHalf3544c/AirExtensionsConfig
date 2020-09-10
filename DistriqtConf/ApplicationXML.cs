@@ -274,11 +274,11 @@ namespace DistriqtConf
             {
                 disriqtConfig.FileName = dlg.FileName;
 
-                DisriqtConfig.GoogleService = uxGoogleServiceId.Text;
-                DisriqtConfig.Adverts = uxAdverts.Text;
+                disriqtConfig.GoogleService = uxGoogleServiceId.Text;
+                disriqtConfig.Adverts = uxAdverts.Text;
 
-                DisriqtConfig.YOUR_FACEBOOK_APP_ID = uxYOUR_FACEBOOK_APP_ID.Text;
-                DisriqtConfig.YOUR_PACKAGE_NAME = uxYOUR_PACKAGE_NAME.Text;
+                disriqtConfig.YOUR_FACEBOOK_APP_ID = uxYOUR_FACEBOOK_APP_ID.Text;
+                disriqtConfig.YOUR_PACKAGE_NAME = uxYOUR_PACKAGE_NAME.Text;
 
                 disriqtConfig.Save();
 
