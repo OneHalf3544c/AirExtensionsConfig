@@ -215,8 +215,7 @@
 &lt;/manifest&gt;</value>
   </data>
   <data name="ApplicationRateManifest" xml:space="preserve">
-    <value>&lt;manifestAdditions&gt;&lt;![CDATA[
-	&lt;manifest android:installLocation="auto"&gt;
+    <value>	&lt;manifest android:installLocation="auto"&gt;
 		&lt;uses-permission android:name="android.permission.INTERNET"/&gt;
 		&lt;uses-permission android:name="android.permission.FOREGROUND_SERVICE" /&gt;
 
@@ -243,7 +242,7 @@
 
 		&lt;/application&gt;
 	&lt;/manifest&gt;
-]]&gt;&lt;/manifestAdditions&gt;</value>
+</value>
   </data>
   <data name="ApplicationRater" xml:space="preserve">
     <value>&lt;extensions&gt;
@@ -260,7 +259,6 @@
   &lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/&gt;
 	&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
   &lt;uses-permission android:name="com.android.vending.BILLING"/&gt;
-  &lt;uses-permission android:name="android.permission.GET_ACCOUNTS"/&gt;
 &lt;/manifest&gt;</value>
   </data>
   <data name="Facebook" xml:space="preserve">
@@ -281,7 +279,7 @@
 	&lt;extensionID&gt;androidx.transition&lt;/extensionID&gt;
 	&lt;extensionID&gt;androidx.vectordrawable&lt;/extensionID&gt;
 	&lt;extensionID&gt;com.android.installreferrer&lt;/extensionID&gt;
-	&lt;extensionID&gt;com.google.android.material&lt;/extensionID&gt;
+	&lt;extensionID&gt;com.google.android.material&lt;/extensionID&gt;&lt;extensionID&gt;androidx.multidex&lt;/extensionID&gt;
 &lt;/extensions&gt;</value>
   </data>
   <data name="FacebookManifest" xml:space="preserve">

@@ -184,7 +184,13 @@ namespace DistriqtConf
                 AddManifest(Properties.Resources.ApplicationManifest);
             }
 
-            
+            if (checkBox6.Checked)
+            {
+                Add(Properties.Resources.ApplicationRater);
+                AddManifest(Properties.Resources.ApplicationRateManifest);
+            }
+
+
 
             AddManifest(Properties.Resources.CommonManifest);
 
@@ -207,7 +213,7 @@ namespace DistriqtConf
 
                 if (DisriqtConfig != null)
                 {
-                    string text = outDoc.ToString().Replace("android_", "android:");
+                    string text = outDoc.ToString();
                     text = text.Replace("XXXXXXXXXXXX", DisriqtConfig.GoogleService);
                     text = text.Replace("ca-app-pub-AAAAAAAAAAAAAAAA~XXXXXXXXXX", DisriqtConfig.Adverts);
 
@@ -251,6 +257,23 @@ namespace DistriqtConf
 
                         }
                     }
+
+                    /*try
+                    {
+                        XmlDocument doc = new XmlDocument();
+                        doc.LoadXml(text);
+
+                        XMLHelper.XMLSort.sortXML(doc);
+
+                        text = doc.OuterXml;
+
+                    }
+                    catch(Exception ee)
+                    {
+
+                    }*/
+
+                    text = text.Replace("android_", "android:");
 
                     textBox2.Text = text;
                 }
@@ -318,6 +341,13 @@ namespace DistriqtConf
                     uxYOUR_PACKAGE_NAME.Text = DisriqtConfig.YOUR_PACKAGE_NAME;
                 }
             }
+        }
+
+        private void diffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            generateXmlToolStripMenuItem_Click(sender, e);
+
+
         }
     }
 }

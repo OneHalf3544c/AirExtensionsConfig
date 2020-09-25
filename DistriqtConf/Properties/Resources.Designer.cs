@@ -19,7 +19,7 @@ namespace DistriqtConf.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -135,8 +135,7 @@ namespace DistriqtConf.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;manifestAdditions&gt;&lt;![CDATA[
-        ///	&lt;manifest android:installLocation=&quot;auto&quot;&gt;
+        ///   Looks up a localized string similar to 	&lt;manifest android:installLocation=&quot;auto&quot;&gt;
         ///		&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;
         ///		&lt;uses-permission android:name=&quot;android.permission.FOREGROUND_SERVICE&quot; /&gt;
         ///
@@ -148,7 +147,8 @@ namespace DistriqtConf.Properties {
         ///				android:enabled=&quot;false&quot;
         ///				android:exported=&quot;false&quot;
         ///				android:launchMode=&quot;singleInstance&quot;
-        ///				android:process=&quot;:playcore_m [rest of string was truncated]&quot;;.
+        ///				android:process=&quot;:playcore_missing_splits_activity&quot;
+        ///				a [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ApplicationRateManifest {
             get {
@@ -177,7 +177,6 @@ namespace DistriqtConf.Properties {
         ///  &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot;/&gt;
         ///	&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;
         ///  &lt;uses-permission android:name=&quot;com.android.vending.BILLING&quot;/&gt;
-        ///  &lt;uses-permission android:name=&quot;android.permission.GET_ACCOUNTS&quot;/&gt;
         ///&lt;/manifest&gt;.
         /// </summary>
         internal static string CommonManifest {

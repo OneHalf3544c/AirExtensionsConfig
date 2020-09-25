@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.uxYOUR_FACEBOOK_APP_ID = new System.Windows.Forms.TextBox();
+            this.uxYOUR_PACKAGE_NAME = new System.Windows.Forms.TextBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.uxAdverts = new System.Windows.Forms.TextBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
@@ -48,8 +50,8 @@
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateXmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxYOUR_PACKAGE_NAME = new System.Windows.Forms.TextBox();
-            this.uxYOUR_FACEBOOK_APP_ID = new System.Windows.Forms.TextBox();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.diffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -90,6 +92,22 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "ANEs";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // uxYOUR_FACEBOOK_APP_ID
+            // 
+            this.uxYOUR_FACEBOOK_APP_ID.Location = new System.Drawing.Point(263, 18);
+            this.uxYOUR_FACEBOOK_APP_ID.Name = "uxYOUR_FACEBOOK_APP_ID";
+            this.uxYOUR_FACEBOOK_APP_ID.Size = new System.Drawing.Size(146, 20);
+            this.uxYOUR_FACEBOOK_APP_ID.TabIndex = 14;
+            this.uxYOUR_FACEBOOK_APP_ID.Text = "YOUR_FACEBOOK_APP_ID";
+            // 
+            // uxYOUR_PACKAGE_NAME
+            // 
+            this.uxYOUR_PACKAGE_NAME.Location = new System.Drawing.Point(125, 18);
+            this.uxYOUR_PACKAGE_NAME.Name = "uxYOUR_PACKAGE_NAME";
+            this.uxYOUR_PACKAGE_NAME.Size = new System.Drawing.Size(132, 20);
+            this.uxYOUR_PACKAGE_NAME.TabIndex = 13;
+            this.uxYOUR_PACKAGE_NAME.Text = "YOUR_PACKAGE_NAME";
             // 
             // checkBox5
             // 
@@ -216,7 +234,9 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.generateXmlToolStripMenuItem});
+            this.generateXmlToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.diffToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -261,21 +281,17 @@
             this.generateXmlToolStripMenuItem.Text = "Generate xml";
             this.generateXmlToolStripMenuItem.Click += new System.EventHandler(this.generateXmlToolStripMenuItem_Click);
             // 
-            // uxYOUR_PACKAGE_NAME
+            // toolStripMenuItem1
             // 
-            this.uxYOUR_PACKAGE_NAME.Location = new System.Drawing.Point(125, 18);
-            this.uxYOUR_PACKAGE_NAME.Name = "uxYOUR_PACKAGE_NAME";
-            this.uxYOUR_PACKAGE_NAME.Size = new System.Drawing.Size(132, 20);
-            this.uxYOUR_PACKAGE_NAME.TabIndex = 13;
-            this.uxYOUR_PACKAGE_NAME.Text = "YOUR_PACKAGE_NAME";
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
             // 
-            // uxYOUR_FACEBOOK_APP_ID
+            // diffToolStripMenuItem
             // 
-            this.uxYOUR_FACEBOOK_APP_ID.Location = new System.Drawing.Point(263, 18);
-            this.uxYOUR_FACEBOOK_APP_ID.Name = "uxYOUR_FACEBOOK_APP_ID";
-            this.uxYOUR_FACEBOOK_APP_ID.Size = new System.Drawing.Size(146, 20);
-            this.uxYOUR_FACEBOOK_APP_ID.TabIndex = 14;
-            this.uxYOUR_FACEBOOK_APP_ID.Text = "YOUR_FACEBOOK_APP_ID";
+            this.diffToolStripMenuItem.Name = "diffToolStripMenuItem";
+            this.diffToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.diffToolStripMenuItem.Text = "Diff";
+            this.diffToolStripMenuItem.Click += new System.EventHandler(this.diffToolStripMenuItem_Click);
             // 
             // ApplicationXML
             // 
@@ -328,5 +344,7 @@
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.TextBox uxYOUR_FACEBOOK_APP_ID;
         private System.Windows.Forms.TextBox uxYOUR_PACKAGE_NAME;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem diffToolStripMenuItem;
     }
 }

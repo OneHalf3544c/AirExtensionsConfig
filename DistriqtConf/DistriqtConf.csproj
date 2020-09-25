@@ -51,11 +51,21 @@
     <Compile Include="ApplicationXML.Designer.cs">
       <DependentUpon>ApplicationXML.cs</DependentUpon>
     </Compile>
+    <Compile Include="DiffXML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiffXML.Designer.cs">
+      <DependentUpon>DiffXML.cs</DependentUpon>
+    </Compile>
     <Compile Include="DisriqtConfig.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XMLHelper.cs" />
     <EmbeddedResource Include="ApplicationXML.resx">
       <DependentUpon>ApplicationXML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiffXML.resx">
+      <DependentUpon>DiffXML.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
