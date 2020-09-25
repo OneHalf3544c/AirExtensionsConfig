@@ -211,6 +211,40 @@ namespace DistriqtConf
             {
                 //MessageBox.Show(outDoc.ToString().Replace("android_", "android:"));
 
+                XElement root = (XElement)outDoc.FirstNode;
+
+                foreach (XElement element in outDoc.Descendants("application"))
+                {
+                    if(element.Attribute("android_name")==null)
+                        element.Add(new XAttribute("android_name", "androidx.multidex.MultiDexApplication"));
+                }
+
+                
+
+                /*while (true)
+                {
+                    XElement uses_permission = null;
+
+                    foreach (XElement element in outDoc.Descendants("uses-permission"))
+                    {
+                        if(element.Parent!=outDoc.FirstNode)
+                        {
+                            uses_permission = element;
+                            break;
+                        }
+                    }
+
+                    if (uses_permission!=null)
+                    {
+                        uses_permission.Remove();
+                        root.Add(uses_permission);
+                        
+                    }
+                    else break;
+                }*/
+
+
+
                 if (DisriqtConfig != null)
                 {
                     string text = outDoc.ToString();
