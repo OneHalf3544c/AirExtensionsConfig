@@ -103,6 +103,20 @@ namespace DistriqtConf.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://github.com/distriqt/ANE-Core/raw/master/lib/com.distriqt.Core.ane
+        ///https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane
+        ///https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.AdsIdentifier.ane
+        ///https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane
+        ///https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.protobuflite.ane
+        ///https://github.com/distriqt/ANE-GooglePlayServices/r [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ANEs {
+            get {
+                return ResourceManager.GetString("ANEs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;extensions&gt;
         ///    &lt;extensionID&gt;com.distriqt.Application&lt;/extensionID&gt;
         ///    &lt;extensionID&gt;com.distriqt.Core&lt;/extensionID&gt;
@@ -227,6 +241,46 @@ namespace DistriqtConf.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;extensions&gt;
+        ///    &lt;extensionID&gt;com.distriqt.facebook.Core&lt;/extensionID&gt;
+        ///    &lt;extensionID&gt;com.distriqt.facebook.Login&lt;/extensionID&gt;
+        ///
+        ///    &lt;extensionID&gt;com.distriqt.Core&lt;/extensionID&gt;
+        ///    &lt;extensionID&gt;com.distriqt.Bolts&lt;/extensionID&gt;
+        ///
+        ///    &lt;extensionID&gt;androidx.core&lt;/extensionID&gt;
+        ///    &lt;extensionID&gt;androidx.appcompat&lt;/extensionID&gt;
+        ///    &lt;extensionID&gt;androidx.browser&lt;/extensionID&gt;
+        ///    &lt;extensionID&gt;androidx.cardview&lt;/extensionID&gt;
+        ///    &lt;extensionID&gt;androidx.vectordrawable&lt;/extensionID&gt;
+        ///    &lt;extensionID&gt;com.a [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string FacebookSignin {
+            get {
+                return ResourceManager.GetString("FacebookSignin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;manifest android:installLocation=&quot;auto&quot;&gt;
+        ///    &lt;uses-sdk android:minSdkVersion=&quot;15&quot; android:targetSdkVersion=&quot;29&quot; /&gt;
+        ///    &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;
+        ///
+        ///    &lt;uses-permission android:name=&quot;com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE&quot; /&gt;
+        ///
+        ///    &lt;application
+        ///        android:appComponentFactory=&quot;androidx.core.app.CoreComponentFactory&quot;
+        ///        android:hardwareAccelerated=&quot;true&quot;&gt;
+        ///
+        ///        &lt;!-- IMPORTANT: Do not remove the backslash and space at the  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string FaceBookSignINManifest {
+            get {
+                return ResourceManager.GetString("FaceBookSignINManifest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;extensions&gt;
         ///    &lt;extensionID&gt;com.distriqt.GameServices&lt;/extensionID&gt;
         ///    &lt;extensionID&gt;com.distriqt.Core&lt;/extensionID&gt;
         ///    &lt;extensionID&gt;androidx.core&lt;/extensionID&gt;
@@ -295,6 +349,42 @@ namespace DistriqtConf.Properties {
         internal static string InAppManifest {
             get {
                 return ResourceManager.GetString("InAppManifest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;extensions&gt;
+        ///    &lt;extensionID&gt;com.distriqt.NativeWebView&lt;/extensionID&gt;
+        ///    &lt;extensionID&gt;com.distriqt.Core&lt;/extensionID&gt;
+        ///
+        ///    &lt;!-- ANDROID --&gt;
+        ///    &lt;extensionID&gt;androidx.browser&lt;/extensionID&gt;
+        ///    &lt;extensionID&gt;androidx.core&lt;/extensionID&gt;
+        ///
+        ///&lt;/extensions&gt;.
+        /// </summary>
+        internal static string NativeWebView {
+            get {
+                return ResourceManager.GetString("NativeWebView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;manifest android:installLocation=&quot;auto&quot;&gt;
+        ///    &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;
+        ///    
+        ///    &lt;!-- android:hardwareAccelerated is highly recommended for video playback and scroll performance --&gt;
+        ///    &lt;!-- android:windowSoftInputMode is used to push the content up when an input appears below the keyboard --&gt;
+        ///    &lt;application 
+        ///        android:hardwareAccelerated=&quot;true&quot;
+        ///        android:windowSoftInputMode=&quot;adjustResize&quot;&gt;
+        ///                    
+        ///        &lt;activity 
+        ///            androi [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string NativeWebViewManifest {
+            get {
+                return ResourceManager.GetString("NativeWebViewManifest", resourceCulture);
             }
         }
     }

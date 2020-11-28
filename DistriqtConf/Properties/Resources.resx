@@ -167,6 +167,36 @@
 
 &lt;/manifest&gt;</value>
   </data>
+  <data name="ANEs" xml:space="preserve">
+    <value>https://github.com/distriqt/ANE-Core/raw/master/lib/com.distriqt.Core.ane
+https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane
+https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.AdsIdentifier.ane
+https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane
+https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.protobuflite.ane
+https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.firebase.core.ane
+https://github.com/distriqt/ANE-Firebase/raw/master/lib/com.distriqt.Firebase.ane
+https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane
+https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.protobuflite.ane
+https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane
+https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.AdsIdentifier.ane
+https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.firebase.core.ane
+https://github.com/distriqt/ANE-Firebase/raw/master/lib/com.distriqt.Firebase.ane
+https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.appcompat.ane
+https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.browser.ane
+https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.core.ane
+https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.constraintlayout.ane
+https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.vectordrawable.ane
+https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.google.code.gson.ane
+https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Base.ane
+https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Ads.ane
+https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.AdsIdentifier.ane
+https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/com.android.installreferrer.ane
+https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Drive.ane
+https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Games.ane
+https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.distriqt.playservices.Auth.ane
+https://github.com/distriqt/ANE-AndroidSupport/raw/master/lib/androidx.cardview.ane
+https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.android.play.ane</value>
+  </data>
   <data name="Application" xml:space="preserve">
     <value>&lt;extensions&gt;
     &lt;extensionID&gt;com.distriqt.Application&lt;/extensionID&gt;
@@ -331,6 +361,22 @@
 
 &lt;/manifest&gt;</value>
   </data>
+  <data name="FacebookSignin" xml:space="preserve">
+    <value>&lt;extensions&gt;
+    &lt;extensionID&gt;com.distriqt.facebook.Core&lt;/extensionID&gt;
+    &lt;extensionID&gt;com.distriqt.facebook.Login&lt;/extensionID&gt;
+
+    &lt;extensionID&gt;com.distriqt.Core&lt;/extensionID&gt;
+    &lt;extensionID&gt;com.distriqt.Bolts&lt;/extensionID&gt;
+
+    &lt;extensionID&gt;androidx.core&lt;/extensionID&gt;
+    &lt;extensionID&gt;androidx.appcompat&lt;/extensionID&gt;
+    &lt;extensionID&gt;androidx.browser&lt;/extensionID&gt;
+    &lt;extensionID&gt;androidx.cardview&lt;/extensionID&gt;
+    &lt;extensionID&gt;androidx.vectordrawable&lt;/extensionID&gt;
+    &lt;extensionID&gt;com.android.installreferrer&lt;/extensionID&gt;
+&lt;/extensions&gt;</value>
+  </data>
   <data name="GameService" xml:space="preserve">
     <value>&lt;extensions&gt;
     &lt;extensionID&gt;com.distriqt.GameServices&lt;/extensionID&gt;
@@ -397,6 +443,86 @@
 
 	&lt;/application&gt;
 
+&lt;/manifest&gt;</value>
+  </data>
+  <data name="FaceBookSignINManifest" xml:space="preserve">
+    <value>&lt;manifest android:installLocation="auto"&gt;
+    &lt;uses-sdk android:minSdkVersion="15" android:targetSdkVersion="29" /&gt;
+    &lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+
+    &lt;uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /&gt;
+
+    &lt;application
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:hardwareAccelerated="true"&gt;
+
+        &lt;!-- IMPORTANT: Do not remove the backslash and space at the beginning of the following value string. --&gt;
+        &lt;meta-data android:name="com.facebook.sdk.ApplicationId" android:value="\ FACEBOOK_APP_ID"/&gt;
+
+        &lt;activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /&gt;
+        &lt;activity android:name="com.facebook.CustomTabMainActivity" /&gt;
+        &lt;activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true" &gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.intent.action.VIEW" /&gt;
+                &lt;category android:name="android.intent.category.DEFAULT" /&gt;
+                &lt;category android:name="android.intent.category.BROWSABLE" /&gt;
+                &lt;data android:scheme="fbFACEBOOK_APP_ID" /&gt;
+
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+
+        &lt;provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:authorities="APPLICATION_PACKAGE.FacebookInitProvider"
+            android:exported="false" /&gt;
+
+        &lt;receiver
+            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+            android:exported="false" &gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/receiver&gt;
+
+    &lt;/application&gt;
+
+&lt;/manifest&gt;</value>
+  </data>
+  <data name="NativeWebView" xml:space="preserve">
+    <value>&lt;extensions&gt;
+    &lt;extensionID&gt;com.distriqt.NativeWebView&lt;/extensionID&gt;
+    &lt;extensionID&gt;com.distriqt.Core&lt;/extensionID&gt;
+
+    &lt;!-- ANDROID --&gt;
+    &lt;extensionID&gt;androidx.browser&lt;/extensionID&gt;
+    &lt;extensionID&gt;androidx.core&lt;/extensionID&gt;
+
+&lt;/extensions&gt;</value>
+  </data>
+  <data name="NativeWebViewManifest" xml:space="preserve">
+    <value>&lt;manifest android:installLocation="auto"&gt;
+    &lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+    
+    &lt;!-- android:hardwareAccelerated is highly recommended for video playback and scroll performance --&gt;
+    &lt;!-- android:windowSoftInputMode is used to push the content up when an input appears below the keyboard --&gt;
+    &lt;application 
+        android:hardwareAccelerated="true"
+        android:windowSoftInputMode="adjustResize"&gt;
+                    
+        &lt;activity 
+            android:name="com.distriqt.extension.nativewebview.activities.BrowseActivity" 
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /&gt;
+
+    &lt;activity 
+      android:name="com.distriqt.extension.nativewebview.permissions.AuthorisationActivity" 
+      android:theme="@android:style/Theme.Translucent.NoTitleBar" /&gt;
+
+    &lt;/application&gt;
 &lt;/manifest&gt;</value>
   </data>
 </root>

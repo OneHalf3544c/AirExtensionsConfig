@@ -9,6 +9,8 @@ namespace DistriqtConf
 {
     class DisriqtConfig
     {
+        
+
         public string FileName
         {
             get;set;
@@ -24,6 +26,11 @@ namespace DistriqtConf
         }
 
         public string YOUR_PACKAGE_NAME
+        {
+            get;set;
+        }
+
+        public string FACEBOOK_APP_NAME
         {
             get;set;
         }
@@ -47,6 +54,7 @@ namespace DistriqtConf
             doc.FirstChild.Attributes.Append(doc.CreateAttribute("GoogleService")).Value = GoogleService;
             doc.FirstChild.Attributes.Append(doc.CreateAttribute("YOUR_PACKAGE_NAME")).Value = YOUR_PACKAGE_NAME;
             doc.FirstChild.Attributes.Append(doc.CreateAttribute("YOUR_FACEBOOK_APP_ID")).Value = YOUR_FACEBOOK_APP_ID;
+            doc.FirstChild.Attributes.Append(doc.CreateAttribute("FACEBOOK_APP_NAME")).Value = FACEBOOK_APP_NAME;
 
             doc.Save(fileName);
 
@@ -73,6 +81,7 @@ namespace DistriqtConf
             {
                 YOUR_PACKAGE_NAME = doc.FirstChild.Attributes["YOUR_PACKAGE_NAME"].Value;
                 YOUR_FACEBOOK_APP_ID = doc.FirstChild.Attributes["YOUR_FACEBOOK_APP_ID"].Value;
+                FACEBOOK_APP_NAME = doc.FirstChild.Attributes["FACEBOOK_APP_NAME"].Value;
             }
             catch
             {

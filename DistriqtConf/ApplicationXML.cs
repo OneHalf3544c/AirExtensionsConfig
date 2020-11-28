@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Linq;
+using System.Net;
 
 
 
@@ -30,7 +31,7 @@ namespace DistriqtConf
                 string remove2 = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
                 XmlDocument doc = new XmlDocument();
 
-                string xml = textBox1.Text.Replace(remove, "");
+                string xml = uxAneList.Text.Replace(remove, "");
                 xml = xml.Replace(remove2, "");
 
                 doc.LoadXml(xml);
@@ -57,7 +58,7 @@ namespace DistriqtConf
             }
         }
 
-        private void Add(string xml)
+        private void Add(string xml, string comment = "")
         {
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(xml);
@@ -68,7 +69,10 @@ namespace DistriqtConf
                 foreach (XmlNode node in list)
                 {
                     string lib = node.InnerXml;
-                    if (!labrery.ContainsKey(lib)) labrery.Add(lib, lib);
+                    if (!labrery.ContainsKey(lib))
+                    {
+                        labrery.Add(lib, comment);
+                    }
                 }
             }
 
@@ -77,6 +81,11 @@ namespace DistriqtConf
         private void AddManifest(string xml)
         {
             xml = xml.Replace("android:", "android_");
+
+            if(xml.Contains("android.permission.READ_PHONE_STATE"))
+            {
+                Console.WriteLine("test");
+            }
 
             if (outDoc == null)
             {
@@ -156,55 +165,99 @@ namespace DistriqtConf
 
             if (checkBox4.Checked)
             {
-                Add(Properties.Resources.Adverts);
+                Add(Properties.Resources.Adverts, "Adverts");
                 AddManifest(Properties.Resources.AdvertsManifest);
+            }
+
+
+            if (checkBox7.Checked)
+            {
+                Add(Properties.Resources.FacebookSignin, "FacebookSignin");
+                AddManifest(Properties.Resources.FaceBookSignINManifest);
             }
 
             if (checkBox1.Checked)
             {
-                Add(Properties.Resources.Facebook);
-                AddManifest(Properties.Resources.FacebookManifest);
+                Add(Properties.Resources.Facebook, "Facebook");
+                AddManifest(Properties.Resources.FacebookManifest );
             }
 
             if (checkBox2.Checked)
             {
-                Add(Properties.Resources.GameService);
+                Add(Properties.Resources.GameService, "GameService");
                 AddManifest(Properties.Resources.GameSeviceManifest);
             }
 
             if (checkBox3.Checked)
             {
-                Add(Properties.Resources.InApp);
+                Add(Properties.Resources.InApp, "InApp");
                 AddManifest(Properties.Resources.InAppManifest);
             }
 
             if(checkBox5.Checked)
             {
-                Add(Properties.Resources.Application);
-                AddManifest(Properties.Resources.ApplicationManifest);
+                Add(Properties.Resources.Application, "Application");
+                //AddManifest(Properties.Resources.ApplicationManifest); // !!!!
             }
 
             if (checkBox6.Checked)
             {
-                Add(Properties.Resources.ApplicationRater);
+                Add(Properties.Resources.ApplicationRater, "AppRater");
                 AddManifest(Properties.Resources.ApplicationRateManifest);
+            }
+
+            if(checkBox8.Checked)
+            {
+                Add(Properties.Resources.NativeWebView, "NativeWebView");
+                AddManifest(Properties.Resources.NativeWebViewManifest);
             }
 
 
 
+
             AddManifest(Properties.Resources.CommonManifest);
+
+            Dictionary<string, string> downloads = new Dictionary<string, string>();
+            Dictionary<string, string> notFoundDownloads = new Dictionary<string, string>();
+            string notFoundDownloadsStr = string.Empty;
 
             if (labrery.Keys.Count > 0)
             {
                 string outText = "<extensions>" + Environment.NewLine;
                 foreach (string key in labrery.Keys)
                 {
-                    outText += "\t<extensionID>" + key + "</extensionID>" + Environment.NewLine;
+                    outText += "\t<extensionID>" + key + "</extensionID>" + (labrery[key] == string.Empty ? "" : "<!-- " + labrery[key] + " -->") + Environment.NewLine;
                 }
 
                 outText += "</extensions>" + Environment.NewLine;
 
-                textBox1.Text = outText;
+                uxAneList.Text = outText;
+
+                string[] listAne = Properties.Resources.ANEs.Split('\n');
+
+                foreach (string key in labrery.Keys)
+                {
+                    bool exists = false;
+                    foreach(string url in listAne)
+                    {
+                        if(url.Contains(key))
+                        {
+                            exists = true;
+
+                            if(!downloads.Keys.Contains(key))
+                            {
+                                downloads.Add(key, url);
+                            }
+                        }
+
+                    }
+
+                    if(!exists)
+                    {
+                        notFoundDownloads.Add(key, key);
+                        notFoundDownloadsStr += key + " " + labrery[key] + Environment.NewLine;
+                    }
+                }
             }
 
             if (outDoc != null)
@@ -253,6 +306,16 @@ namespace DistriqtConf
 
                     text = text.Replace("[YOUR_FACEBOOK_APP_ID]", DisriqtConfig.YOUR_FACEBOOK_APP_ID);
                     text = text.Replace("YOUR_PACKAGE_NAME", DisriqtConfig.YOUR_PACKAGE_NAME);
+
+                    //
+                    //You will need to replace the instances of FACEBOOK_APP_ID and FACEBOOK_APP_NAME with the relevant settings from your Facebook app. (Don't include the braces).
+                    //You will need to replace the instances of APPLICATION_PACKAGE with your applications java package name(generally your AIR application id prefixed with air.) eg air.com.distriqt.test.
+                    //
+
+                    text = text.Replace("FACEBOOK_APP_NAME", DisriqtConfig.FACEBOOK_APP_NAME);
+                    text = text.Replace("FACEBOOK_APP_ID", DisriqtConfig.YOUR_FACEBOOK_APP_ID);
+                    text = text.Replace("APPLICATION_PACKAGE", DisriqtConfig.YOUR_PACKAGE_NAME);
+
 
                     int firstApplication = text.IndexOf("<application");
                     int lastApplication = text.LastIndexOf("</application>");
@@ -313,7 +376,50 @@ namespace DistriqtConf
                 }
             }
 
+            if(downloads.Keys.Count>0)
+            {
+                if(MessageBox.Show("Download anes?", "Question", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)== DialogResult.Yes)
+                {
+                    FolderBrowserDialog dlg = new FolderBrowserDialog();
+                    if(dlg.ShowDialog()== DialogResult.OK)
+                    {
+                        foreach(string file in downloads.Keys)
+                        {
+                            Download(downloads[file], dlg.SelectedPath + "\\" + file + ".ane");
+                        }
+                    }
+                }
+            }
+
             tabControl1.SelectedIndex = 1;
+        }
+
+        private void Download(string uri, string outFile)
+        {
+            /*WebClient webClient = new WebClient();
+            webClient.DownloadFile(url, outFile);*/
+
+            //webClient.DownloadFileCompleted += WebClient_DownloadFileCompleted;
+            //webClient.DownloadProgressChanged += WebClient_DownloadProgressChanged;
+            //webClient.DownloadFileAsync(new Uri(url), outFile);
+
+            //string uri = "https://nvd.nist.gov/download/nvd-rss.xml";
+
+            using (WebClient client = new WebClient())
+            {
+                System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+                client.DownloadFile(uri, outFile);
+            }
+        }
+
+        private void WebClient_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
+        private void WebClient_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            //throw new NotImplementedException();
         }
 
         private DisriqtConfig DisriqtConfig
@@ -336,6 +442,7 @@ namespace DistriqtConf
 
                 disriqtConfig.YOUR_FACEBOOK_APP_ID = uxYOUR_FACEBOOK_APP_ID.Text;
                 disriqtConfig.YOUR_PACKAGE_NAME = uxYOUR_PACKAGE_NAME.Text;
+                disriqtConfig.FACEBOOK_APP_NAME = uxFACEBOOK_APP_NAME.Text;
 
                 disriqtConfig.Save();
 
@@ -353,6 +460,7 @@ namespace DistriqtConf
 
                 DisriqtConfig.YOUR_FACEBOOK_APP_ID = uxYOUR_FACEBOOK_APP_ID.Text;
                 DisriqtConfig.YOUR_PACKAGE_NAME = uxYOUR_PACKAGE_NAME.Text;
+                DisriqtConfig.FACEBOOK_APP_NAME = uxFACEBOOK_APP_NAME.Text;
                 DisriqtConfig.Save();
             }
             else saveAsToolStripMenuItem_Click(sender, e);
@@ -373,6 +481,7 @@ namespace DistriqtConf
                     uxGoogleServiceId.Text = DisriqtConfig.GoogleService;
                     uxYOUR_FACEBOOK_APP_ID.Text = DisriqtConfig.YOUR_FACEBOOK_APP_ID;
                     uxYOUR_PACKAGE_NAME.Text = DisriqtConfig.YOUR_PACKAGE_NAME;
+                    uxFACEBOOK_APP_NAME.Text = disriqtConfig.FACEBOOK_APP_NAME;
                 }
             }
         }
