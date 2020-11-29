@@ -21,6 +21,9 @@ namespace DistriqtConf
         public ApplicationXML()
         {
             InitializeComponent();
+
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.XML;
+            fastColoredTextBox2.Language = FastColoredTextBoxNS.Language.XML;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -31,7 +34,7 @@ namespace DistriqtConf
                 string remove2 = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
                 XmlDocument doc = new XmlDocument();
 
-                string xml = uxAneList.Text.Replace(remove, "");
+                string xml = fastColoredTextBox2.Text.Replace(remove, "");
                 xml = xml.Replace(remove2, "");
 
                 doc.LoadXml(xml);
@@ -235,7 +238,7 @@ namespace DistriqtConf
 
                 outText += "</extensions>" + Environment.NewLine;
 
-                uxAneList.Text = outText;
+                fastColoredTextBox2.Text = outText;
 
                 string[] listAne = Properties.Resources.ANEs.Split('\n');
 
@@ -258,9 +261,33 @@ namespace DistriqtConf
 
                     if(!exists)
                     {
-                        notFoundDownloads.Add(key, key);
+                        notFoundDownloads.Add(key, labrery[key]);
                         notFoundDownloadsStr += key + " " + labrery[key] + Environment.NewLine;
                     }
+                }
+
+                if(uxUndownloaded.Checked)
+                {
+                    outText += Environment.NewLine;
+                    outText += Environment.NewLine;
+                    outText += Environment.NewLine;
+
+                    
+
+                    foreach (string key in notFoundDownloads.Keys)
+                    {
+                        outText += "<ane ";
+
+                        outText += "ane =\"" + key + "\" lib =\"" + notFoundDownloads[key] + "\"";
+
+                        outText += "/>" + Environment.NewLine;
+                    }
+
+                    
+
+                    fastColoredTextBox2.Text = outText;
+
+                    
                 }
             }
 
@@ -379,7 +406,7 @@ namespace DistriqtConf
 
                     text = text.Replace("android_", "android:");
 
-                    textBox2.Text = text;
+                    fastColoredTextBox1.Text = text;
                 }
             }
 
