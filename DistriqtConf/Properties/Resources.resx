@@ -493,6 +493,11 @@ https://github.com/distriqt/ANE-GooglePlayServices/raw/master/lib/com.google.and
 
 &lt;/manifest&gt;</value>
   </data>
+  <data name="Multidex" xml:space="preserve">
+    <value>&lt;extensions&gt;
+	&lt;extensionID&gt;androidx.multidex&lt;/extensionID&gt;
+&lt;/extensions&gt;</value>
+  </data>
   <data name="NativeWebView" xml:space="preserve">
     <value>&lt;extensions&gt;
     &lt;extensionID&gt;com.distriqt.NativeWebView&lt;/extensionID&gt;

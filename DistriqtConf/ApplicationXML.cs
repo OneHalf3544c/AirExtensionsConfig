@@ -212,6 +212,10 @@ namespace DistriqtConf
                 AddManifest(Properties.Resources.NativeWebViewManifest);
             }
 
+            if(uxMultidex.Checked)
+            {
+                Add(Properties.Resources.Multidex, "Multidex");
+            }
 
 
 
@@ -226,7 +230,7 @@ namespace DistriqtConf
                 string outText = "<extensions>" + Environment.NewLine;
                 foreach (string key in labrery.Keys)
                 {
-                    outText += "\t<extensionID>" + key + "</extensionID>" + (labrery[key] == string.Empty ? "" : "<!-- " + labrery[key] + " -->") + Environment.NewLine;
+                    outText += "\t<extensionID>" + key + "</extensionID>" + (uxComments.Checked ? (labrery[key] == string.Empty ? "" : "<!-- " + labrery[key] + " -->") : "") + Environment.NewLine;
                 }
 
                 outText += "</extensions>" + Environment.NewLine;
@@ -266,10 +270,13 @@ namespace DistriqtConf
 
                 XElement root = (XElement)outDoc.FirstNode;
 
-                foreach (XElement element in outDoc.Descendants("application"))
+                if (uxMultidex.Checked)
                 {
-                    if(element.Attribute("android_name")==null)
-                        element.Add(new XAttribute("android_name", "androidx.multidex.MultiDexApplication"));
+                    foreach (XElement element in outDoc.Descendants("application"))
+                    {
+                        if (element.Attribute("android_name") == null)
+                            element.Add(new XAttribute("android_name", "androidx.multidex.MultiDexApplication"));
+                    }
                 }
 
                 
@@ -402,8 +409,6 @@ namespace DistriqtConf
             //webClient.DownloadFileCompleted += WebClient_DownloadFileCompleted;
             //webClient.DownloadProgressChanged += WebClient_DownloadProgressChanged;
             //webClient.DownloadFileAsync(new Uri(url), outFile);
-
-            //string uri = "https://nvd.nist.gov/download/nvd-rss.xml";
 
             using (WebClient client = new WebClient())
             {

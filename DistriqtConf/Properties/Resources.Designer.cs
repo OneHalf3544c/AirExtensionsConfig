@@ -354,6 +354,17 @@ namespace DistriqtConf.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;extensions&gt;
+        ///	&lt;extensionID&gt;androidx.multidex&lt;/extensionID&gt;
+        ///&lt;/extensions&gt;.
+        /// </summary>
+        internal static string Multidex {
+            get {
+                return ResourceManager.GetString("Multidex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;extensions&gt;
         ///    &lt;extensionID&gt;com.distriqt.NativeWebView&lt;/extensionID&gt;
         ///    &lt;extensionID&gt;com.distriqt.Core&lt;/extensionID&gt;
         ///
