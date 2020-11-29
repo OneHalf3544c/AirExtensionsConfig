@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.uxComments = new System.Windows.Forms.CheckBox();
+            this.uxMultidex = new System.Windows.Forms.CheckBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.uxFACEBOOK_APP_NAME = new System.Windows.Forms.TextBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
@@ -55,8 +57,6 @@
             this.generateXmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.diffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxMultidex = new System.Windows.Forms.CheckBox();
-            this.uxComments = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -102,6 +102,28 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "ANEs";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // uxComments
+            // 
+            this.uxComments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.uxComments.AutoSize = true;
+            this.uxComments.Location = new System.Drawing.Point(689, 90);
+            this.uxComments.Name = "uxComments";
+            this.uxComments.Size = new System.Drawing.Size(74, 17);
+            this.uxComments.TabIndex = 19;
+            this.uxComments.Text = "comments";
+            this.uxComments.UseVisualStyleBackColor = true;
+            // 
+            // uxMultidex
+            // 
+            this.uxMultidex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.uxMultidex.AutoSize = true;
+            this.uxMultidex.Location = new System.Drawing.Point(689, 67);
+            this.uxMultidex.Name = "uxMultidex";
+            this.uxMultidex.Size = new System.Drawing.Size(64, 17);
+            this.uxMultidex.TabIndex = 18;
+            this.uxMultidex.Text = "multidex";
+            this.uxMultidex.UseVisualStyleBackColor = true;
             // 
             // checkBox8
             // 
@@ -330,26 +352,6 @@
             this.diffToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.diffToolStripMenuItem.Text = "Diff";
             this.diffToolStripMenuItem.Click += new System.EventHandler(this.diffToolStripMenuItem_Click);
-            // 
-            // uxMultidex
-            // 
-            this.uxMultidex.AutoSize = true;
-            this.uxMultidex.Location = new System.Drawing.Point(689, 67);
-            this.uxMultidex.Name = "uxMultidex";
-            this.uxMultidex.Size = new System.Drawing.Size(64, 17);
-            this.uxMultidex.TabIndex = 18;
-            this.uxMultidex.Text = "multidex";
-            this.uxMultidex.UseVisualStyleBackColor = true;
-            // 
-            // uxComments
-            // 
-            this.uxComments.AutoSize = true;
-            this.uxComments.Location = new System.Drawing.Point(689, 90);
-            this.uxComments.Name = "uxComments";
-            this.uxComments.Size = new System.Drawing.Size(74, 17);
-            this.uxComments.TabIndex = 19;
-            this.uxComments.Text = "comments";
-            this.uxComments.UseVisualStyleBackColor = true;
             // 
             // ApplicationXML
             // 

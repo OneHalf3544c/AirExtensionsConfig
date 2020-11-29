@@ -449,6 +449,18 @@ namespace DistriqtConf
                 disriqtConfig.YOUR_PACKAGE_NAME = uxYOUR_PACKAGE_NAME.Text;
                 disriqtConfig.FACEBOOK_APP_NAME = uxFACEBOOK_APP_NAME.Text;
 
+                if (checkBox1.Checked) DisriqtConfig.Options += 1;
+                if (checkBox2.Checked) DisriqtConfig.Options += 2;
+                if (checkBox3.Checked) DisriqtConfig.Options += 4;
+                if (checkBox4.Checked) DisriqtConfig.Options += 8;
+                if (checkBox5.Checked) DisriqtConfig.Options += 16;
+                if (checkBox6.Checked) DisriqtConfig.Options += 32;
+                if (checkBox7.Checked) DisriqtConfig.Options += 64;
+                if (checkBox8.Checked) DisriqtConfig.Options += 128;
+
+                if (uxMultidex.Checked) DisriqtConfig.Options += 256;
+                if (uxComments.Checked) DisriqtConfig.Options += 512;
+
                 disriqtConfig.Save();
 
                 DisriqtConfig = disriqtConfig;
@@ -466,6 +478,22 @@ namespace DistriqtConf
                 DisriqtConfig.YOUR_FACEBOOK_APP_ID = uxYOUR_FACEBOOK_APP_ID.Text;
                 DisriqtConfig.YOUR_PACKAGE_NAME = uxYOUR_PACKAGE_NAME.Text;
                 DisriqtConfig.FACEBOOK_APP_NAME = uxFACEBOOK_APP_NAME.Text;
+
+                DisriqtConfig.Options = 0;
+
+                if (checkBox1.Checked) DisriqtConfig.Options += 1;
+                if (checkBox2.Checked) DisriqtConfig.Options += 2;
+                if (checkBox3.Checked) DisriqtConfig.Options += 4;
+                if (checkBox4.Checked) DisriqtConfig.Options += 8;
+                if (checkBox5.Checked) DisriqtConfig.Options += 16;
+                if (checkBox6.Checked) DisriqtConfig.Options += 32;
+                if (checkBox7.Checked) DisriqtConfig.Options += 64;
+                if (checkBox8.Checked) DisriqtConfig.Options += 128;
+
+                if (uxMultidex.Checked) DisriqtConfig.Options += 256;
+                if (uxComments.Checked) DisriqtConfig.Options += 512;
+
+
                 DisriqtConfig.Save();
             }
             else saveAsToolStripMenuItem_Click(sender, e);
@@ -487,6 +515,34 @@ namespace DistriqtConf
                     uxYOUR_FACEBOOK_APP_ID.Text = DisriqtConfig.YOUR_FACEBOOK_APP_ID;
                     uxYOUR_PACKAGE_NAME.Text = DisriqtConfig.YOUR_PACKAGE_NAME;
                     uxFACEBOOK_APP_NAME.Text = disriqtConfig.FACEBOOK_APP_NAME;
+
+                    if(disriqtConfig.Options>0)
+                    {
+                        checkBox1.Checked=false;
+                        checkBox2.Checked=false;
+                        checkBox3.Checked=false;
+                        checkBox4.Checked=false;
+                        checkBox5.Checked=false;
+                        checkBox6.Checked=false;
+                        checkBox7.Checked=false;
+                        checkBox8.Checked = false;
+
+                        uxMultidex.Checked = false;
+                        uxComments.Checked = false;
+
+
+                        if ((DisriqtConfig.Options & 1) == 1) checkBox1.Checked = true;
+                        if ((DisriqtConfig.Options & 2) == 2) checkBox2.Checked = true;
+                        if ((DisriqtConfig.Options & 4) == 4) checkBox3.Checked = true;
+                        if ((DisriqtConfig.Options & 8) == 8) checkBox4.Checked = true;
+                        if ((DisriqtConfig.Options & 16) == 16) checkBox5.Checked = true;
+                        if ((DisriqtConfig.Options & 32) == 32) checkBox6.Checked = true;
+                        if ((DisriqtConfig.Options & 64) == 64) checkBox7.Checked = true;
+                        if ((DisriqtConfig.Options & 128) == 128) checkBox8.Checked = true;
+                        if ((DisriqtConfig.Options & 256) == 256) uxMultidex.Checked = true;
+                        if ((DisriqtConfig.Options & 512) == 512)uxComments.Checked = true;
+                    }
+
                 }
             }
         }

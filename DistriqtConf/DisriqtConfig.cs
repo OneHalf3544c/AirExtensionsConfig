@@ -9,6 +9,10 @@ namespace DistriqtConf
 {
     class DisriqtConfig
     {
+        public int Options
+        {
+            get;set;
+        }
         
 
         public string FileName
@@ -56,6 +60,8 @@ namespace DistriqtConf
             doc.FirstChild.Attributes.Append(doc.CreateAttribute("YOUR_FACEBOOK_APP_ID")).Value = YOUR_FACEBOOK_APP_ID;
             doc.FirstChild.Attributes.Append(doc.CreateAttribute("FACEBOOK_APP_NAME")).Value = FACEBOOK_APP_NAME;
 
+            doc.FirstChild.Attributes.Append(doc.CreateAttribute("Options")).Value = Options.ToString();
+
             doc.Save(fileName);
 
             FileName = fileName;
@@ -82,6 +88,15 @@ namespace DistriqtConf
                 YOUR_PACKAGE_NAME = doc.FirstChild.Attributes["YOUR_PACKAGE_NAME"].Value;
                 YOUR_FACEBOOK_APP_ID = doc.FirstChild.Attributes["YOUR_FACEBOOK_APP_ID"].Value;
                 FACEBOOK_APP_NAME = doc.FirstChild.Attributes["FACEBOOK_APP_NAME"].Value;
+            }
+            catch
+            {
+
+            }
+
+            try
+            {
+                Options = Convert.ToInt32(doc.FirstChild.Attributes["Options"].Value);
             }
             catch
             {
